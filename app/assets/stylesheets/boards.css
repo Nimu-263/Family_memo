@@ -1,0 +1,112 @@
+header {
+  background-color: #FFFFFF;
+  width: 100vw;
+  height: 70px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(#FBAB7E, #F7CE68);
+}
+
+.tittle-bar {
+  height: 70px;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tittle {
+  color: #FFFFFF;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Open Sans Condensed', sans-serif;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  text-align: center;
+}
+
+.sub-tittle {
+  font-size: 15px;
+}
+
+.tittle:hover {
+  color: rgba(255, 255, 255, .7)
+}
+
+.navigation-bar {
+  height: 70px;
+  width: 80%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  padding: 0 20px 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.menu h1 {
+  font-weight: bold;
+  color: rgb(100, 100, 100);
+}
+
+.menu-name a {
+  color: #FFFFFF;
+  font-weight: bold;
+  position: relative;
+}
+
+.menu-name a::before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: block;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform 0.4s ease
+}
+
+.menu-name a:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1)
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  padding: 0 15px 0 15px;
+}
+
+.box {
+  padding: 10px 0;
+  border: 3px double #FFFFFF;
+  border-radius: 20px;
+}
+
+.chat {
+  background-color: #FFFFFF;
+  height: calc(100vh - 70px);
+}
+
+.messages {
+  background-color: #FAFAFA;
+  height: calc(100vh - 90px);
+  padding: 46px 40px 0;
+}
+.form {
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;
+}
