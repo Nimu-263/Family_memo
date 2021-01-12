@@ -1,19 +1,20 @@
+/* headerのCSS */
+
 header {
   background-color: #FFFFFF;
   width: 100vw;
-  height: 70px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
   /* 下記は後ほどコメントアウトを外す */
-  /* position: fixed;
+  position: fixed;
   top: 0;
-  z-index: 100; */
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   background: linear-gradient(#FBAB7E, #F7CE68);
 }
 
 .tittle-bar {
-  height: 70px;
+  height: 72px;
   width: 20%;
   display: flex;
   justify-content: center;
@@ -39,7 +40,6 @@ header {
 }
 
 .navigation-bar {
-  height: 70px;
   width: 80%;
   padding: 0 20px;
   display: flex;
@@ -90,8 +90,62 @@ li {
   padding: 0 15px 0 15px;
 }
 
-.box {
+.enclosure {
   padding: 10px 0;
   border: 3px double #FFFFFF;
   border-radius: 20px;
+}
+
+/* headerのCSS */
+
+.wrapper {
+  padding-top: 72px;
+  display: flex;
+}
+
+/* purchase-listのCSS */
+
+.purchase-list {
+  background-color: #FFFFFF;
+  width: 65%;
+  height: 100vh;
+}
+
+.purchase-list-header {
+  height: 100px;
+  padding: 0 40px;
+}
+
+.lists {
+  background-color: #2F3E51;
+  height: calc(100vh - 100px);
+  padding: 0 40px;
+}
+
+/* purchase-listのCSS */
+
+/* bulletin-boardのCSS */
+
+.bulletin-board {
+  background-color: #253141;;
+  width: calc(100vw - 65%);
+}
+
+.board-form {
+  background-color: #DDDDDD;
+  height: 150px;
+  padding: 20px 40px;
+}
+
+.board-messages {
+  background-color: #FAFAFA;
+  height: calc(100vh - 90px);
+  padding: 0 40px;
+}
+
+/* bulletin-boardのCSS */
+
+footer {
+  text-align: center;
+  background-color: darkgray;
 }
