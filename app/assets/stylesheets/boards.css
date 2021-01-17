@@ -4,7 +4,6 @@ header {
   background-color: #FFFFFF;
   width: 100vw;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
-  /* 下記は後ほどコメントアウトを外す */
   position: fixed;
   top: 0;
   z-index: 100;
@@ -36,7 +35,7 @@ header {
 }
 
 .tittle:hover {
-  color: rgba(255, 255, 255, .7)
+  color: rgba(255, 255, 255, .7);
 }
 
 .navigation-bar {
@@ -54,7 +53,7 @@ header {
 
 .menu h1 {
   font-weight: bold;
-  color: rgb(100, 100, 100);
+  color: rgb(77, 77, 77);
 }
 
 .menu-name a {
@@ -74,12 +73,12 @@ header {
   display: block;
   transform-origin: right top;
   transform: scale(0, 1);
-  transition: transform 0.4s ease
+  transition: transform 0.4s ease;
 }
 
 .menu-name a:hover::before {
   transform-origin: left top;
-  transform: scale(1, 1)
+  transform: scale(1, 1);
 }
 
 ul {
@@ -99,7 +98,7 @@ li {
 /* headerのCSS */
 
 .wrapper {
-  padding-top: 72px;
+  margin-top: 72px;
   display: flex;
 }
 
@@ -114,12 +113,39 @@ li {
 .purchase-list-header {
   height: 100px;
   padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-name h1 {
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(77, 77, 77);
+  border-bottom: 3px double lightgray;
+}
+
+.create-list a {
+  font-size: 12px;
+  font-weight: bold;
+  border: 3px double lightblue;
+  border-radius: 20px;
+  padding: 14px;
+  color: deepskyblue;
+  margin-left: 20px;
+}
+
+.create-list a:hover {
+  color: rgba(55, 200, 248, 0.8);
 }
 
 .lists {
-  background-color: #2F3E51;
   height: calc(100vh - 100px);
-  padding: 0 40px;
+  margin: 0 40px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  box-shadow: 0px 0px 4px 0px lightgray;
+  overflow:scroll;
 }
 
 /* purchase-listのCSS */
@@ -127,7 +153,7 @@ li {
 /* bulletin-boardのCSS */
 
 .bulletin-board {
-  background-color: #253141;;
+  background-color: #253141;
   width: calc(100vw - 65%);
 }
 
@@ -139,7 +165,7 @@ li {
 
 .board-messages {
   background-color: #FAFAFA;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 150px);
   padding: 0 40px;
 }
 
