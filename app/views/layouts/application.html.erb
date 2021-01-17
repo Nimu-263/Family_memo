@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ZaikoKanri</title>
+    <title>Family ~memo~</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,39 @@
   </head>
 
   <body>
+    <header>
+      <div class="tittle-bar">
+        <div class="tittle">
+          <a href = "/">
+            Family ~memo~<br>
+            <span class = "sub-tittle">-お家の掲示板-</span>
+          </a>
+        </div>
+      </div>
+
+      <nav class="navigation-bar">
+        <div class="menu">
+          <h1>在庫：</h1>
+          <div class="menu-name enclosure">
+            <ul>
+              <li><a href="#">日用品</a></li>
+              <li><a href="#">食品</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="menu-name">
+            <a href="#">買い物Chat</a>
+          </div>
+        </div>
+      </nav>
+      <nav class="user-nav">
+      </nav>
+    </header>
     <%= yield %>
+    <footer>
+      <%# 後ほど修正を加える %>
+      <p>&copy; Jun_Nishimura space</p>
+    </footer>
   </body>
 </html>

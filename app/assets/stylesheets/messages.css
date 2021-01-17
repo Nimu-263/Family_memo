@@ -1,0 +1,15 @@
+.chat {
+  background-color: #FFFFFF;
+  height: calc(100vh - 70px);
+}
+
+.messages {
+  background-color: #FAFAFA;
+  height: calc(100vh - 90px);
+  padding: 46px 40px 0;
+}
+.form {
+  background-color: #DDDDDD;
+  height: 90px;
+  padding: 20px 40px;
+}
