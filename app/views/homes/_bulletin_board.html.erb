@@ -12,13 +12,13 @@
 </div>
 
 <% @boards.each do |board| %>
-  <div class="post">
-    <div class="post-date">
-      投稿日時：<%= post.created_at %>
+  <div class="memo">
+    <div class="memo-date">
+      投稿日時：<%= board.created_at %>
     </div>
-    <div class="post-content">
-      <%= post.title %>
-      <%= post.content %>
+    <div class="memo-content">
+      <%= board.title %>
+      <%= board.content %>
     </div>
   </div>
 <% end %>
