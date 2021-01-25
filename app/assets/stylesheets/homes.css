@@ -123,6 +123,7 @@ li {
   font-weight: bold;
   color: rgb(77, 77, 77);
   border-bottom: 3px double lightgray;
+  display: inline;
 }
 
 .create-list a {
@@ -137,6 +138,7 @@ li {
 
 .create-list a:hover {
   color: rgba(55, 200, 248, 0.8);
+  border: 3px double rgba(173, 216, 230, 0.8);
 }
 
 .lists {
@@ -153,7 +155,7 @@ li {
 /* bulletin-boardのCSS */
 
 .bulletin-board {
-  background-color: #DDDDDD;
+  /* background-color: #DDDDDD; */
   width: calc(100vw - 65%);
   padding: 20px 40px;
 }
@@ -162,8 +164,51 @@ li {
   height: 100px;
   padding: 0 40px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.board-name {
+  margin: 17px 0 24px;
+}
+
+.board-name h1{
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(77, 77, 77);
+  border-bottom: 3px double lightgray;
+  display: inline;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+form input,textarea {
+  border: 1px solid darkgray;
+  border-radius: 2px;
+  box-shadow: 0px 0px 4px 0px darkgray;
+  margin: 10px 0;
+  width: 350px;
+}
+
+input[type="submit"] {
+  background-color: lightgray;
+  width: 100px;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 5px 0;
+  text-align: center;
+}
+
+input[type="submit"]:hover {
+  color: rgb(100, 100, 100);
+  background-color: rgba(211, 211, 211, 0.6);
 }
 
 /* bulletin-boardのCSS */

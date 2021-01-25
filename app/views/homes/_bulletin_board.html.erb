@@ -1,11 +1,12 @@
 <div class="bulletin-board-header">
-  <div class="header-name">
+  <div class="board-name">
     <h1>掲示板</h1>
   </div>
   <div class="board-form">
     <%= form_with url: homes_path, method: :post, id: "form" do |form| %>
-      <%= form.text_field :content %>
-      <%= form.submit '投稿する' , id: "submit" %>
+      <%= form.text_field :title, placeholder: " タイトル " %>
+      <%= form.text_area :content, rows: 3, placeholder: " 内容 " %>
+      <%= form.submit 'メモを追加', id: "submit" %>
     <% end %>
   </div>
 </div>
@@ -16,6 +17,7 @@
       投稿日時：<%= post.created_at %>
     </div>
     <div class="post-content">
+      <%= post.title %>
       <%= post.content %>
     </div>
   </div>
