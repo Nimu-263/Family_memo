@@ -1,5 +1,22 @@
-<div class="board-form">
+<div class="bulletin-board-header">
+  <div class="header-name">
+    <h1>掲示板</h1>
+  </div>
+  <div class="board-form">
+    <%= form_with url: homes_path, method: :post, id: "form" do |form| %>
+      <%= form.text_field :content %>
+      <%= form.submit '投稿する' , id: "submit" %>
+    <% end %>
+  </div>
 </div>
 
-<div class="board-messages">
-</div>
+<% @boards.each do |board| %>
+  <div class="post">
+    <div class="post-date">
+      投稿日時：<%= post.created_at %>
+    </div>
+    <div class="post-content">
+      <%= post.content %>
+    </div>
+  </div>
+<% end %>
