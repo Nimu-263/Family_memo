@@ -155,7 +155,9 @@ li {
 /* bulletin-boardのCSS */
 
 .bulletin-board {
-  /* background-color: #DDDDDD; */
+  background-image: url("retina_wood.png");
+  background-color:rgba(255,255,255,0.3);
+  background-blend-mode:lighten;
   width: calc(100vw - 65%);
   padding: 20px 40px;
 }
@@ -176,7 +178,7 @@ li {
   font-size: 25px;
   font-weight: bold;
   color: rgb(77, 77, 77);
-  border-bottom: 3px double lightgray;
+  border-bottom: 3px double darkgray;
   display: inline;
 }
 
@@ -188,9 +190,9 @@ li {
 }
 
 form input,textarea {
-  border: 1px solid darkgray;
+  border: 1px solid rgb(100, 100, 100);
   border-radius: 2px;
-  box-shadow: 0px 0px 4px 0px darkgray;
+  box-shadow: 0px 0px 2px 0px rgb(100, 100, 100);
   margin: 10px 0;
   width: 350px;
 }
@@ -208,7 +210,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   color: rgb(100, 100, 100);
-  background-color: rgba(211, 211, 211, 0.6);
+  background-color: rgba(211, 211, 211, 0.7);
 }
 
 /* bulletin-boardのCSS */
