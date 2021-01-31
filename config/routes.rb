@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
   root to: "homes#index"
-  resources :boards, only: [:create, :destroy]
+  resources :homes, only: [:index, :create, :destroy]
+  get 'homes/:id', to: 'homes#checked'
 end
