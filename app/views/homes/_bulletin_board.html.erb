@@ -1,26 +1,31 @@
 <div class="bulletin-board-header">
   <div class="board-name">
-    <h1>掲示板</h1>
+    <h1>『 掲示板 』</h1>
   </div>
   <div class="board-form">
     <%= form_with url: homes_path, method: :post, id: "form" do |form| %>
-      <%= form.text_field :title, placeholder: "宛先", class: "memo-text" %>
-      <%= form.text_area :content, rows: 3, placeholder: "内容", class: "memo-text" %>
-      <%= form.submit 'メモを追加', id: "submit" %>
+      <%= form.text_field :title, placeholder: "宛先", class: "memo-text", id: "title" %>
+      <%= form.text_area :content, rows: 3, placeholder: "内容", class: "memo-text", id: "content" %>
+      <%= form.submit '投稿', id: "submit" %>
     <% end %>
   </div>
 </div>
 
 <div class="memos">
+  <div id="list">
+  </div>
   <% @memos.each do |memo| %>
     <div class="memo" data-id=<%= memo.id %> data-check=<%= memo.checked %> >
       <div class="memo-date">
-        投稿日時：<%= memo.created_at %>
+        <%= memo.created_at %>
+      </div>
+      <div class="memo-title">
+        To：<%= memo.title %>
       </div>
       <div class="memo-content">
-        To：<%= memo.title %>
         <%= memo.content %>
       </div>
+      <span>既読</span>
     </div>
   <% end %>
 </div>

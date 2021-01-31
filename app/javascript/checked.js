@@ -22,7 +22,7 @@ function check() {
         if (item.checked === true) {
           memo.setAttribute("data-check", "true");
         } else if (item.checked === false) {
-          memo.removeAttribute("data-check");
+          memo.setAttribute("data-check", "false");
         }
       };
     });

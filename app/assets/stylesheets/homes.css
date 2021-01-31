@@ -53,7 +53,7 @@ header {
 
 .menu h1 {
   font-weight: bold;
-  color: rgb(77, 77, 77);
+  color: rgb(49, 49, 49);
 }
 
 .menu-name a {
@@ -121,8 +121,8 @@ li {
 .header-name h1 {
   font-size: 25px;
   font-weight: bold;
-  color: rgb(77, 77, 77);
-  border-bottom: 3px double lightgray;
+  color: rgb(49, 49, 49);
+  border-bottom: 3px double rgb(167, 167, 167);
   display: inline;
 }
 
@@ -160,11 +160,14 @@ li {
   background-blend-mode:lighten;
   width: calc(100vw - 65%);
   padding: 20px 40px;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .bulletin-board-header {
   height: 100px;
   padding: 0 40px;
+  margin-bottom: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,9 +180,12 @@ li {
 .board-name h1{
   font-size: 25px;
   font-weight: bold;
-  color: rgb(77, 77, 77);
-  border-bottom: 3px double darkgray;
+  color: rgb(49, 49, 49);
   display: inline;
+}
+
+.board-form {
+  width: 100%;
 }
 
 #form {
@@ -195,24 +201,36 @@ li {
   box-shadow: 0px 0px 2px 0px rgb(100, 100, 100);
   margin: 10px 0 0;
   padding: 0 5px;
-  width: 350px;
+  width: 100%;
 }
 
 input[type="submit"] {
   background-color: lightgray;
-  width: 100px;
-  border: 1px solid rgba(0,0,0,.125);
+  width: 30%;
+  border: 1px solid rgba(0,0,0,.3);
+  border-bottom: 4px solid rgba(0,0,0,.3);
   border-radius: 4px;
   font-weight: bold;
   font-size: 15px;
   margin-top: 10px;
   padding: 5px 0;
   text-align: center;
+  transition: 0.1s;
+  outline: 0;
 }
 
-input[type="submit"]:hover {
-  color: rgb(100, 100, 100);
-  background-color: rgba(211, 211, 211, 0.7);
+input[type="submit"]:active {
+  transform: translateY(4px);
+  border-bottom: none;
+  border-bottom: 2px solid rgba(0,0,0,.3);
+  cursor: pointer;
+}
+
+#list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .memos {
@@ -224,16 +242,43 @@ input[type="submit"]:hover {
 
 .memo {
   border: 1px solid;
-  width: 300px;
-  padding: 10px;
-  margin-top: 150px;
-}
-.memo-date {
-  color: gray;
+  width: 75%;
+  padding: 15px;
+  margin: 5px 0 10px;
+  border: 1px solid rgb(100, 100, 100);
+  border-radius: 20px;
+  box-shadow: 0px 0px 4px 0px rgb(100, 100, 100);
+  position: relative;
 }
 
-div[data-check="true"] {
-  background: #585555;
+.memo-date {
+  color: gray;
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+
+.memo-title {
+  margin-bottom: 7px;
+  border-bottom: 1px solid rgb(100, 100, 100);
+  box-shadow: 0px 1px 0px 0px rgba(100, 100, 100, .2);
+}
+
+.memo span {
+  margin-top: 3px;
+  color: gray;
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: -15px;
+  top: 20px;
+}
+
+div[data-check="false"] span{
+  display: none;
+}
+
+div[data-check="true"] span{
+  display: block;
 }
 
 /* bulletin-boardのCSS */
