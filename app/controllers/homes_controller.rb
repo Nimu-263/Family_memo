@@ -4,8 +4,8 @@ class HomesController < ApplicationController
   end
 
   def create
-    Memo.create(title: params[:title], content: params[:content], checked: false)
-    redirect_to action: :index
+    memo = Memo.create(title: params[:title], content: params[:content], checked: false)
+    render json:{ memo: memo }
   end
 
   def checked
