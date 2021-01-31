@@ -189,11 +189,12 @@ li {
   align-items: center;
 }
 
-form input,textarea {
+.memo-text {
   border: 1px solid rgb(100, 100, 100);
   border-radius: 2px;
   box-shadow: 0px 0px 2px 0px rgb(100, 100, 100);
-  margin: 10px 0;
+  margin: 10px 0 0;
+  padding: 0 5px;
   width: 350px;
 }
 
@@ -204,6 +205,7 @@ input[type="submit"] {
   border-radius: 4px;
   font-weight: bold;
   font-size: 15px;
+  margin-top: 10px;
   padding: 5px 0;
   text-align: center;
 }
@@ -211,6 +213,27 @@ input[type="submit"] {
 input[type="submit"]:hover {
   color: rgb(100, 100, 100);
   background-color: rgba(211, 211, 211, 0.7);
+}
+
+.memos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.memo {
+  border: 1px solid;
+  width: 300px;
+  padding: 10px;
+  margin-top: 150px;
+}
+.memo-date {
+  color: gray;
+}
+
+div[data-check="true"] {
+  background: #585555;
 }
 
 /* bulletin-boardのCSS */

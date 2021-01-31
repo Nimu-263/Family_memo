@@ -4,21 +4,23 @@
   </div>
   <div class="board-form">
     <%= form_with url: homes_path, method: :post, id: "form" do |form| %>
-      <%= form.text_field :title, placeholder: " タイトル " %>
-      <%= form.text_area :content, rows: 3, placeholder: " 内容 " %>
+      <%= form.text_field :title, placeholder: "宛先", class: "memo-text" %>
+      <%= form.text_area :content, rows: 3, placeholder: "内容", class: "memo-text" %>
       <%= form.submit 'メモを追加', id: "submit" %>
     <% end %>
   </div>
 </div>
 
-<% @boards.each do |board| %>
-  <div class="memo">
-    <div class="memo-date">
-      投稿日時：<%= board.created_at %>
+<div class="memos">
+  <% @memos.each do |memo| %>
+    <div class="memo" data-id=<%= memo.id %> data-check=<%= memo.checked %> >
+      <div class="memo-date">
+        投稿日時：<%= memo.created_at %>
+      </div>
+      <div class="memo-content">
+        To：<%= memo.title %>
+        <%= memo.content %>
+      </div>
     </div>
-    <div class="memo-content">
-      <%= board.title %>
-      <%= board.content %>
-    </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

@@ -1,20 +1,22 @@
 class HomesController < ApplicationController
   def index
-    @boards = Board.all.order(id: "DESC")
+    @memos = Memo.all.order(id: "DESC")
   end
 
   def create
+    Memo.create(title: params[:title], content: params[:content], checked: false)
+    redirect_to action: :index
   end
 
   def checked
-    post = Board.find(params[:id])
-    if post.checked 
-      post.update(checked: false)
+    memo = Memo.find(params[:id])
+    if memo.checked 
+      memo.update(checked: false)
     else
-      post.update(checked: true)
+      memo.update(checked: true)
     end
 
-    memo = Board.find(params[:id])
-    render json: { post: memo }
+    item = Memo.find(params[:id])
+    render json: { memo: item }
   end
 end
