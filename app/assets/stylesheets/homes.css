@@ -204,7 +204,7 @@ li {
   width: 100%;
 }
 
-input[type="submit"] {
+#submit {
   background-color: lightgray;
   width: 30%;
   border: 1px solid rgba(0,0,0,.3);
@@ -219,7 +219,7 @@ input[type="submit"] {
   outline: 0;
 }
 
-input[type="submit"]:active {
+#submit:active {
   transform: translateY(4px);
   border-bottom: none;
   border-bottom: 2px solid rgba(0,0,0,.3);
@@ -286,4 +286,5 @@ div[data-check="true"] span{
 footer {
   text-align: center;
   background-color: darkgray;
+  height: 72px;
 }
