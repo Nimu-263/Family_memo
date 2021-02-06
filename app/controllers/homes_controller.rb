@@ -9,6 +9,15 @@ class HomesController < ApplicationController
     @list = List.new
   end
 
+  def list_create
+    @list = List.new(list_params)
+    if @list.save
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
   def create
     memo = Memo.create(title: params[:title], content: params[:content], checked: false)
     render json:{ memo: memo }
@@ -27,6 +36,10 @@ class HomesController < ApplicationController
   end
 
   private
+
+  def list_params
+    params.require(:list).permit(:name, :explanation, :price).merge(user_id: current_user.id)
+  end
 
   def move_to_registration
     unless user_signed_in?
