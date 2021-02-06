@@ -3,7 +3,7 @@
     <div class='account-page__inner--left account-page__header'>
       <h2>アカウント編集</h2>
       <h5>アカウントの編集</h5>
-      <%= link_to "ログアウトする場合はこちら", "#", class: 'page-transition-btn'%>
+      <%= link_to "ログアウトする場合はこちら", destroy_user_session_path, method: :delete, class: 'page-transition-btn'%>
       <br>
       <%= link_to "トップページに戻る", "/", class: 'back-toppage'%>
     </div>

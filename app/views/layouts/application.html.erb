@@ -27,16 +27,26 @@
             <ul>
               <li><a href="#">日用品</a></li>
               <li><a href="#">食品</a></li>
+              <li><a href="#">その他</a></li>
             </ul>
           </div>
         </div>
-        <div class="menu">
+        <%# <div class="menu">
           <div class="menu-name">
             <a href="#">買い物Chat</a>
           </div>
-        </div>
+        </div> %>
       </nav>
       <nav class="user-nav">
+        <ul class="user-nav-list">
+          <% if user_signed_in? %>
+            <li><%= link_to current_user.group_name, edit_user_path(current_user), class: "user-groupname " %></li>
+            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "nav-btn " %></li> 
+          <% else %>
+            <li><%= link_to 'アカウント登録', new_user_registration_path, class: "nav-btn " %></li>
+            <li><%= link_to 'ログイン', new_user_session_path, class: "nav-btn " %></li>
+          <% end %>
+        </ul>
       </nav>
     </header>
     <%= yield %>

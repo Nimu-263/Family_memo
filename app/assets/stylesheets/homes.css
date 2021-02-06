@@ -39,7 +39,7 @@ header {
 }
 
 .navigation-bar {
-  width: 80%;
+  width: 50%;
   padding: 0 20px;
   display: flex;
   align-items: center;
@@ -59,6 +59,7 @@ header {
 .menu-name a {
   color: #FFFFFF;
   font-weight: bold;
+  letter-spacing: 1px;
   position: relative;
 }
 
@@ -95,6 +96,67 @@ li {
   border-radius: 20px;
 }
 
+.user-nav {
+  width: 30%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-btn {
+  color: #fff;
+  font-weight: bold;
+  background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+  display: inline-block;
+  height: 40px;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+}
+
+.nav-btn:hover {
+  opacity: 0.8;
+}
+
+.user-groupname {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Open Sans Condensed', sans-serif;
+  display: inline-block;
+  margin: 0px 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  transition-timing-function: linear;
+  position: relative;
+}
+
+.user-groupname:before {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: block;
+  transform-origin: right top;
+  transform: scale(0, 1);
+  transition: transform 0.4s ease;
+}
+
+.user-groupname:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.user-nav-list {
+  display: flex;
+  align-items: center;
+}
+
 /* headerのCSS */
 
 .wrapper {
@@ -127,18 +189,18 @@ li {
 }
 
 .create-list a {
+  color: #fff;
+  background-color: #38aef0;
   font-size: 12px;
   font-weight: bold;
-  border: 3px double lightblue;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 14px;
-  color: deepskyblue;
   margin-left: 20px;
+  letter-spacing: 1px;
 }
 
 .create-list a:hover {
-  color: rgba(55, 200, 248, 0.8);
-  border: 3px double rgba(173, 216, 230, 0.8);
+  background-color: rgba(56, 174, 240, 0.8);
 }
 
 .lists {
