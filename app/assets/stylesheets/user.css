@@ -57,14 +57,6 @@
   background-color: rgba(141, 141, 141, 0.8);
 }
 
-.forget-password {
-  display: inline-block;
-  margin: 20px 10px 0;
-  color: #000;
-  font-size: 14px;
-  border-bottom: 1px solid rgb(167, 167, 167);
-}
-
 .back-toppage {
   display: inline-block;
   margin: 20px 10px 0;
