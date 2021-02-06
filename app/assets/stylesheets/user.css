@@ -63,7 +63,14 @@
   color: #000;
   font-size: 14px;
   border-bottom: 1px solid rgb(167, 167, 167);
+}
 
+.back-toppage {
+  display: inline-block;
+  margin: 20px 10px 0;
+  color: #000;
+  font-size: 14px;
+  border-bottom: 1px solid rgb(167, 167, 167);
 }
 
 .field {
@@ -101,6 +108,10 @@
   text-align: center;
   border: none;
   border-radius: 4px;
+}
+
+.account-page .btn:hover {
+  background-color: rgba(56, 174, 240, 0.8);
 }
 
 .account-page .field-label .field_with_errors {
