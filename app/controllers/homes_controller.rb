@@ -5,6 +5,10 @@ class HomesController < ApplicationController
     @memos = Memo.all.order(id: "DESC")
   end
 
+  def new
+    @list = List.new
+  end
+
   def create
     memo = Memo.create(title: params[:title], content: params[:content], checked: false)
     render json:{ memo: memo }
