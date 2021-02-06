@@ -1,4 +1,6 @@
 class HomesController < ApplicationController
+  before_action :move_to_registration, except: [:index, :create]
+
   def index
     @memos = Memo.all.order(id: "DESC")
   end
@@ -18,5 +20,13 @@ class HomesController < ApplicationController
 
     item = Memo.find(params[:id])
     render json: { memo: item }
+  end
+
+  private
+
+  def move_to_registration
+    unless user_signed_in?
+      redirect_to new_user_registration_path
+    end
   end
 end
