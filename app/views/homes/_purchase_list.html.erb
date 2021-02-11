@@ -16,9 +16,11 @@
           <li class='list'>
             <%= link_to home_path(list.id) do %>
               <div class='item-img-content'>
-                <%= image_tag list.image, class: "item-img" %>
-
-
+                <% if list.image.attached? %>
+                  <%= image_tag list.image, class: "item-img" %>
+                <% else %>
+                  <%= image_tag "no_image.jpg", class: "item-img" %>
+                <% end %>
 
               </div>
               <div class='item-info'>
