@@ -3,6 +3,7 @@ class HomesController < ApplicationController
 
   def index
     @memos = Memo.all.order(id: "DESC")
+    @lists = List.all.order(id: "DESC")
   end
 
   def new

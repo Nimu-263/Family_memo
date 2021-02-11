@@ -213,6 +213,43 @@ li {
   overflow:scroll;
 }
 
+.item-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vh 0;
+}
+
+.item-lists {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item-lists .list {
+  padding: 1vw;
+  margin: 0 1vw;
+}
+
+.item-img {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  box-shadow: 0px 0px 4px 0px lightgray;
+  width: 25vh;
+  height: 25vh;
+}
+
+.item-info {
+  padding: 1vw;
+}
+
+.item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
 /* purchase-listのCSS */
 
 /* bulletin-boardのCSS */

@@ -7,5 +7,65 @@
   </div>
 </div>
 
+<%# 商品リスト %>
 <div class="lists">
+  <div class='item-contents'>
+    <ul class='item-lists'>
+      <% if List.exists? %>
+        <% @lists.each do |list| %>
+          <li class='list'>
+            <%= link_to home_path(list.id) do %>
+              <div class='item-img-content'>
+                <%= image_tag list.image, class: "item-img" %>
+
+
+
+              </div>
+              <div class='item-info'>
+                <h3 class='item-name'>
+                  <%= list.name %>
+                </h3>
+              </div>
+            <% end %>
+          </li>
+        <% end %>
+      <% end %>
+
+      <%# 商品がない場合のダミー %>
+      <% unless List.exists? %>
+        <li class='list'>
+          <%= link_to '/' do %>
+          <%= image_tag "milk.jpg", class: "item-img" %>
+          <div class='item-info'>
+            <h3 class='item-name'>
+              リスト例①
+            </h3>
+          </div>
+          <% end %>
+        </li>
+        <li class='list'>
+          <%= link_to '/' do %>
+          <%= image_tag "rice.jpg", class: "item-img" %>
+          <div class='item-info'>
+            <h3 class='item-name'>
+              リスト例②
+            </h3>
+          </div>
+          <% end %>
+        </li>
+        <li class='list'>
+          <%= link_to '/' do %>
+          <%= image_tag "sandwich.jpg", class: "item-img" %>
+          <div class='item-info'>
+            <h3 class='item-name'>
+              リスト例③
+            </h3>
+          </div>
+          <% end %>
+        </li>
+      <% end %>
+      <%# /商品がない場合のダミー %>
+    </ul>
+  </div>
 </div>
+<%# /商品一覧 %>
