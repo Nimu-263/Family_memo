@@ -170,7 +170,7 @@ li {
 .purchase-list {
   background-color: #FFFFFF;
   width: 65%;
-  height: 100vh;
+  height: 130vh;
 }
 
 .purchase-list-header {
@@ -205,7 +205,7 @@ li {
 }
 
 .lists {
-  height: calc(100vh - 100px);
+  height: calc(130vh - 100px);
   margin: 0 40px;
   border: 1px solid lightgray;
   border-radius: 4px;
@@ -260,7 +260,7 @@ li {
   background-blend-mode:lighten;
   width: calc(100vw - 65%);
   padding: 20px 40px;
-  height: 100vh;
+  height: 130vh;
   overflow: scroll;
 }
 
