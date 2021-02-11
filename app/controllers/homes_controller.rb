@@ -39,7 +39,7 @@ class HomesController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:name, :explanation, :price).merge(user_id: current_user.id)
+    params.require(:list).permit(:name, :explanation, :price, :image).merge(user_id: current_user.id)
   end
 
   def move_to_registration

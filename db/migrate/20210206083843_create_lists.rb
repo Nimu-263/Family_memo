@@ -4,6 +4,7 @@ class CreateLists < ActiveRecord::Migration[6.0]
       t.string     :name,        null: false
       t.string     :price
       t.text       :explanation
+      t.boolean    :purchase,    null: false, default: false
       t.references :user,        null: false, foreign_key: true
       t.timestamps
     end
