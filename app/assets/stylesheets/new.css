@@ -1,0 +1,120 @@
+.items-add-contents {
+  background-color: #f5f5f5;
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.items-add-main {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 450px;
+  padding: 15vh 15vw;
+}
+
+.items-add-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.indispensable {
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.optional {
+  background: #00cc33;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+/* 商品画像 */
+
+.img-upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
+}
+
+.click-upload p {
+  margin-bottom: 15px;
+}
+
+/* /出品画像 */
+
+/* 商品名と商品説明 */
+
+.new-items {
+  padding: 5vh 0;
+}
+
+.items-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+.items-explain {
+  margin: 2vh 0;
+}
+
+/* /商品名と商品説明 */
+
+/* 下部ボタン */
+.add-btn-contents {
+  width: 100%;
+  text-align: center;
+}
+
+.add-btn {
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4vh;
+  border-radius: 10px;
+}
+
+.back-btn {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  display: inline-block;
+  width: 70%;
+  padding: 15px 0;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+/* /下部ボタン */

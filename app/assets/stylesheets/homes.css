@@ -170,7 +170,7 @@ li {
 .purchase-list {
   background-color: #FFFFFF;
   width: 65%;
-  height: 100vh;
+  height: 130vh;
 }
 
 .purchase-list-header {
@@ -205,12 +205,49 @@ li {
 }
 
 .lists {
-  height: calc(100vh - 100px);
+  height: calc(130vh - 100px);
   margin: 0 40px;
   border: 1px solid lightgray;
   border-radius: 4px;
   box-shadow: 0px 0px 4px 0px lightgray;
   overflow:scroll;
+}
+
+.item-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4vh 0;
+}
+
+.item-lists {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item-lists .list {
+  padding: 1vw;
+  margin: 0 1vw;
+}
+
+.item-img {
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  box-shadow: 0px 0px 4px 0px lightgray;
+  width: 25vh;
+  height: 25vh;
+}
+
+.item-info {
+  padding: 1vw;
+}
+
+.item-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* purchase-listのCSS */
@@ -223,7 +260,7 @@ li {
   background-blend-mode:lighten;
   width: calc(100vw - 65%);
   padding: 20px 40px;
-  height: 100vh;
+  height: 130vh;
   overflow: scroll;
 }
 
