@@ -8,7 +8,7 @@
       <%# 商品画像 %>
       <div class="img-upload">
         <div class="weight-bold-text">
-          出品画像
+          商品画像
           <span class="indispensable">必須</span>
         </div>
         <div class="click-upload">
@@ -30,13 +30,15 @@
         <div class="items-explain">
           <div class="weight-bold-text">
             商品の説明
+            <span class="optional">任意</span>
           </div>
-          <%= f.text_area :explanation, class:"items-text", placeholder:"商品の説明（1,000文字まで）（使用用途、数量、購入店など）例）夕飯はハンバーグにしようと思います。合びき肉400g 駅前のスーパーで買ってきてください。" ,rows:"7" ,maxlength:"1000" %>
+          <%= f.text_area :explanation, class:"items-text", placeholder:"商品の説明（任意 1,000文字まで）（使用用途、数量、購入店など）例）夕飯はハンバーグにしようと思います。合びき肉400g 駅前のスーパーで買ってきてください。" ,rows:"7" ,maxlength:"1000" %>
         </div>
         <div class="weight-bold-text">
           金額の目安
+          <span class="optional">任意</span>
         </div>
-        <%= f.text_area :price, class:"items-text", placeholder:"金額の目安（40文字まで）例）100g 100円くらいのものでお願いします。", maxlength:"40" %>
+        <%= f.text_area :price, class:"items-text", placeholder:"金額の目安（任意 40文字まで）例）100g 100円位のものでお願いします。", maxlength:"40" %>
       </div>
       <%# /商品名と商品説明 %>
 
