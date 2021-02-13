@@ -14,18 +14,22 @@
 <div class="memos">
   <div id="list">
   </div>
-  <% @memos.each do |memo| %>
-    <div class="memo" data-id=<%= memo.id %> data-check=<%= memo.checked %> >
-      <div class="memo-date">
-        <%= memo.created_at %>
-      </div>
-      <div class="memo-title">
-        To：<%= memo.title %>
-      </div>
-      <div class="memo-content">
-        <%= memo.content %>
-      </div>
-      <span>既読</span>
-    </div>
+  <% if user_signed_in? %>
+    <% @memos.each do |memo| %>
+      <% if memo.user_id == current_user.id %>
+        <div class="memo" data-id=<%= memo.id %> data-check=<%= memo.checked %> >
+          <div class="memo-date">
+            <%= memo.created_at %>
+          </div>
+          <div class="memo-title">
+            To：<%= memo.title %>
+          </div>
+          <div class="memo-content">
+            <%= memo.content %>
+          </div>
+          <span>既読</span>
+        </div>
+      <% end %>
+    <% end %>
   <% end %>
 </div>

@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-  before_action :move_to_registration, except: [:index, :create]
+  before_action :move_to_registration, except: [:index]
 
   def index
     @memos = Memo.all.order(id: "DESC")
@@ -20,7 +20,7 @@ class HomesController < ApplicationController
   end
 
   def create
-    memo = Memo.create(title: params[:title], content: params[:content], checked: false)
+    memo = Memo.create(memo_params)
     render json:{ memo: memo }
   end
 
@@ -40,6 +40,10 @@ class HomesController < ApplicationController
 
   def list_params
     params.require(:list).permit(:name, :explanation, :price, :image).merge(user_id: current_user.id)
+  end
+
+  def memo_params
+    params.permit(:title, :content).merge(user_id: current_user.id, checked: false)
   end
 
   def move_to_registration

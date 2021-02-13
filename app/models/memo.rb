@@ -1,4 +1,8 @@
 class Memo < ApplicationRecord
-  validates :title, presence: true
-  validates :content, presence: true
+  belongs_to :user
+
+  with_options presence: true do
+    validates :title
+    validates :content
+  end
 end
