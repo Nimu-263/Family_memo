@@ -261,6 +261,7 @@ li {
   width: calc(100vw - 65%);
   padding: 20px 40px;
   height: 130vh;
+  border-radius: 4px;
   overflow: scroll;
 }
 
