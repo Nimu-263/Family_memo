@@ -21,9 +21,6 @@ function memo() {
       if (item.id != null) {
         const HTML = `
           <div class="memo" data-id=${item.id} data-check=${item.checked}>
-            <div class="memo-date">
-              ${item.created_at}
-            </div>
             <div class="memo-title">
             To：${item.title}
             </div>
