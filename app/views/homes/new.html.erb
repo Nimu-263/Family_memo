@@ -1,7 +1,7 @@
 <div class="items-add-contents">
   <div class="items-add-main">
     <h2 class="items-add-title">商品の情報を入力</h2>
-    <%= form_with model: @list, url: "/homes/list_create", local: true do |f| %>
+    <%= form_with model: @list, url: "/homes", local: true do |f| %>
 
       <%= render 'shared/error_messages', model: f.object %>
 
