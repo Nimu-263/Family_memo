@@ -2,10 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:edit, :update]
   root to: "homes#index"
-  resources :homes do
-    collection do
-      post 'list_create'
-    end
-  end
-  get 'homes/:id', to: 'homes#checked'
+  resources :homes
+  resources :memos, except: [:show]
+  get 'memos/:id', to: 'memos#checked'
 end

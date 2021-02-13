@@ -9,7 +9,7 @@ function check() {
       const memoId = memo.getAttribute("data-id");
 
       const XHR = new XMLHttpRequest();
-      XHR.open("GET", `/homes/${memoId}`, true);
+      XHR.open("GET", `/memos/${memoId}`, true);
       XHR.responseType = "json";
       XHR.send();
   

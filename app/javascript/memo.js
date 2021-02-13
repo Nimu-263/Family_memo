@@ -4,7 +4,7 @@ function memo() {
     const formData = new FormData(document.getElementById("form"));
 
     const XHR = new XMLHttpRequest();
-    XHR.open("POST", "/homes", true);
+    XHR.open("POST", "/memos", true);
     XHR.responseType = "json";
     XHR.send(formData);
 
@@ -20,7 +20,7 @@ function memo() {
 
       if (item.id != null) {
         const HTML = `
-          <div class="memo" data-id=${item.id}>
+          <div class="memo" data-id=${item.id} data-check=${item.checked}>
             <div class="memo-date">
               ${item.created_at}
             </div>
@@ -30,6 +30,7 @@ function memo() {
             <div class="memo-content">
               ${item.content}
             </div>
+            <span>既読</span>
           </div>`;
         list.insertAdjacentHTML("afterend", HTML);
       }
