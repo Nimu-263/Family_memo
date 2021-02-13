@@ -24,8 +24,10 @@ function memo() {
             <div class="memo-date">
               ${item.created_at}
             </div>
+            <div class="memo-title">
+            To：${item.title}
+            </div>
             <div class="memo-content">
-              To：${item.title}
               ${item.content}
             </div>
           </div>`;
