@@ -1,6 +1,6 @@
 .items-add-contents {
   background-color: #f5f5f5;
-  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -13,6 +13,7 @@
   width: 70vw;
   min-width: 450px;
   padding: 15vh 15vw;
+  border-radius: 4px;
 }
 
 .items-add-title {
@@ -104,6 +105,11 @@
   font-weight: bold;
   margin-bottom: 4vh;
   border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+.add-btn:hover {
+  background-color: rgba(234,47,40,0.9)
 }
 
 .back-btn {
@@ -115,6 +121,10 @@
   padding: 15px 0;
   text-decoration: none;
   border-radius: 10px;
+}
+
+.back-btn:hover {
+  background-color: rgba(170,170,170,0.8)
 }
 
 /* /下部ボタン */
