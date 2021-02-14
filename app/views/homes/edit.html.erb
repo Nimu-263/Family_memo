@@ -1,0 +1,53 @@
+<div class="items-add-contents">
+  <div class="items-add-main">
+    <h2 class="items-add-title">欲しいモノの情報を編集</h2>
+    <%= form_with model: @list, url: home_path, local: true do |f| %>
+
+      <%= render 'shared/error_messages', model: f.object %>
+
+      <%# アイコン %>
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          アイコン
+          <span class="optional">任意</span>
+        </div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"item-image" %>
+        </div>
+      </div>
+      <%# /アイコン %>
+
+      <%# 名前と連絡事項 %>
+      <div class="new-items">
+        <div class="weight-bold-text">
+          名前
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :name, class:"items-text", placeholder:"名前（必須 40文字まで)", maxlength:"40" %>
+        <div class="items-explain">
+          <div class="weight-bold-text">
+            連絡事項
+            <span class="optional">任意</span>
+          </div>
+          <%= f.text_area :explanation, class:"items-text", placeholder:"連絡事項（任意 1,000文字まで）（使用用途、数量、購入店など）例）夕飯はハンバーグにしようと思います。合びき肉400g 駅前のスーパーで買ってきてください。" ,rows:"7" ,maxlength:"1000" %>
+        </div>
+        <div class="weight-bold-text">
+          金額の目安
+          <span class="optional">任意</span>
+        </div>
+        <%= f.text_area :price, class:"items-text", placeholder:"金額の目安（任意 40文字まで）例）100g 100円位のものでお願いします。", maxlength:"40" %>
+      </div>
+      <%# /名前と連絡事項 %>
+
+      <%# 下部ボタン %>
+      <div class="add-btn-contents">
+        <%= f.submit "変更する" ,class:"add-btn" %>
+        <%=link_to 'トップページにもどる', root_path, class:"back-btn" %>
+      </div>
+      <%# /下部ボタン %>
+    <% end %>
+  </div>
+</div>

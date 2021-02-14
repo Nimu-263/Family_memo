@@ -22,8 +22,9 @@
     </table>
 
     <%= link_to '購入完了', "/" ,class:"item-red-btn"%>
+    <%# <%= button_to "購入完了", {controller: 'homes', action: 'update'}, {method: :get, params: {num1: 'aaa', num2: 'bbb'}} %> %>
 
-    <br>
+    <hr>
 
     <%= link_to '内容の編集', edit_home_path(@list.id), method: :get, class: "item-blue-btn" %>
     <p class='or-text'>or</p>

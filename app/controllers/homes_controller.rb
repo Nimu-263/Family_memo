@@ -23,6 +23,22 @@ class HomesController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @list.update(list_params)
+      redirect_to home_path(@list.id)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @list.destroy
+    redirect_to root_path
+  end
+
   private
 
   def list_params

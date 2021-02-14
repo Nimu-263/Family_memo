@@ -94,6 +94,11 @@
 
 /* /商品の概要 */
 
+hr {
+  border: 2px dashed darkgray;
+  width: 100%;
+}
+
 .another-item {
   display: block;
   margin-top: 30px;
