@@ -1,4 +1,5 @@
 class HomesController < ApplicationController
+  before_action :set_list, only: [:show, :edit, :update, :destroy]
   before_action :move_to_registration, except: [:index]
 
   def index
@@ -19,10 +20,17 @@ class HomesController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def list_params
     params.require(:list).permit(:name, :explanation, :price, :image).merge(user_id: current_user.id)
+  end
+
+  def set_list
+    @list = List.find(params[:id])
   end
 
   def move_to_registration

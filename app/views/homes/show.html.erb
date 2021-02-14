@@ -1,0 +1,34 @@
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @list.name %>
+    </h2>
+    <div class='item-img-content'>
+      <%= image_tag @list.image ,class:"item-box-img" %>
+
+    </div>
+
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">連絡事項</th>
+          <td class="detail-value"><%= @list.explanation %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">金額の目安</th>
+          <td class="detail-value"><%= @list.price %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <%= link_to '購入完了', "/" ,class:"item-red-btn"%>
+
+    <br>
+
+    <%= link_to '内容の編集', edit_home_path(@list.id), method: :get, class: "item-blue-btn" %>
+    <p class='or-text'>or</p>
+    <%= link_to '削除', home_path(@list.id), method: :delete, class:'item-destroy' %>
+
+    <a href="/" class='another-item'>トップページにもどる</a>
+  </div>
+</div>
