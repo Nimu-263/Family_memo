@@ -11,30 +11,38 @@
 <div class="lists">
   <div class='item-contents'>
     <ul class='item-lists'>
-      <% if List.exists? %>
+      <% if List.exists? && user_signed_in? %>
         <% @lists.each do |list| %>
-          <li class='list'>
-            <%= link_to home_path(list.id) do %>
-              <div class='item-img-content'>
-                <% if list.image.attached? %>
-                  <%= image_tag list.image, class: "item-img" %>
-                <% else %>
-                  <%= image_tag "no_image.jpg", class: "item-img" %>
-                <% end %>
+          <% if list.user_id == current_user.id %>
+            <li class='list'>
+              <%= link_to home_path(list.id) do %>
+                <div class='item-img-content'>
+                  <% if list.image.attached? %>
+                    <%= image_tag list.image, class: "item-img" %>
+                  <% else %>
+                    <%= image_tag "no_image.jpg", class: "item-img" %>
+                  <% end %>
 
-              </div>
-              <div class='item-info'>
-                <h3 class='item-name'>
-                  <%= list.name %>
-                </h3>
-              </div>
-            <% end %>
-          </li>
+                  <% if (list.purchase == true) %>
+                    <div class='completed'>
+                      <span>購入完了</span>
+                    </div>
+                  <% end %>
+
+                </div>
+                <div class='item-info'>
+                  <h3 class='item-name'>
+                    <%= list.name %>
+                  </h3>
+                </div>
+              <% end %>
+            </li>
+          <% end %>
         <% end %>
       <% end %>
 
       <%# 商品がない場合のダミー %>
-      <% unless List.exists? %>
+      <% if List.exists? == false || user_signed_in? == false %>
         <li class='list'>
           <%= link_to '/' do %>
           <%= image_tag "milk.jpg", class: "item-img" %>
