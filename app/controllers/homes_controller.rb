@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-  before_action :set_list, only: [:show, :edit, :update, :destroy]
+  before_action :set_list, only: [:show, :edit, :update, :destroy, :purchase]
   before_action :move_to_registration, except: [:index]
 
   def index
@@ -39,10 +39,18 @@ class HomesController < ApplicationController
     redirect_to root_path
   end
 
+  def purchase
+    if @list.update(purchase: true)
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
+
   private
 
   def list_params
-    params.require(:list).permit(:name, :explanation, :price, :image).merge(user_id: current_user.id)
+    params.require(:list).permit(:name, :explanation, :price, :image).merge(user_id: current_user.id, purchase: false)
   end
 
   def set_list

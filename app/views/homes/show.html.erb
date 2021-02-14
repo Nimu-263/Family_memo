@@ -4,7 +4,17 @@
       <%= @list.name %>
     </h2>
     <div class='item-img-content'>
-      <%= image_tag @list.image ,class:"item-box-img" %>
+      <% if @list.image.attached? %>
+        <%= image_tag @list.image ,class:"item-box-img" %>
+      <% else %>
+        <%= image_tag "no_image.jpg", class: "item-box-img" %>
+      <% end %>
+
+      <% if (@list.purchase == true) %>
+        <div class='completed'>
+          <span>購入完了</span>
+        </div>
+      <% end %>
 
     </div>
 
@@ -21,8 +31,7 @@
       </tbody>
     </table>
 
-    <%= link_to '購入完了', "/" ,class:"item-red-btn"%>
-    <%# <%= button_to "購入完了", {controller: 'homes', action: 'update'}, {method: :get, params: {num1: 'aaa', num2: 'bbb'}} %> %>
+    <%= button_to "購入完了", {controller: 'homes', action: 'purchase'}, {method: :patch, class: "item-red-btn", params: {id: @list.id}} %>
 
     <hr>
 

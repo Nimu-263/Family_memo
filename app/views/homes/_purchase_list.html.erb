@@ -23,6 +23,12 @@
                     <%= image_tag "no_image.jpg", class: "item-img" %>
                   <% end %>
 
+                  <% if (list.purchase == true) %>
+                    <div class='completed'>
+                      <span>購入完了</span>
+                    </div>
+                  <% end %>
+
                 </div>
                 <div class='item-info'>
                   <h3 class='item-name'>
