@@ -391,8 +391,8 @@ li {
   position: absolute;
   width: 0;
   height: 0;
-  right: -15px;
-  top: 20px;
+  left: -30px;
+  top: 30px;
 }
 
 div[data-check="false"] span{
