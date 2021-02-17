@@ -1,8 +1,8 @@
-# ```Family ~memo~```
+## ```Family ~memo~```
 
-## 家庭向け在庫管理アプリケーションです
+__家庭向け在庫管理アプリケーションです__
 
-## URL ： https://family-memo.herokuapp.com/
+__URL ： https://family-memo.herokuapp.com/__
 
 # アプリ概要
 
