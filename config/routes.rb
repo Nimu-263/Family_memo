@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   end
   resources :memos, except: [:show]
   get 'memos/:id', to: 'memos#checked'
+  resources :stocks, only: [:new, :edit, :update]
+  get 'commodity', to: 'stocks#commodity'
 end
