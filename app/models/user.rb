@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :lists
   has_many :memos
+  has_many :commodities
 
   validates :group_name, presence: true
 end
