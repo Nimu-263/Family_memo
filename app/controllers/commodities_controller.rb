@@ -1,4 +1,5 @@
 class CommoditiesController < ApplicationController
+  before_action :set_commodity, only: [:show, :edit, :update, :destroy]
   before_action :move_to_registration
 
   def index
@@ -18,10 +19,17 @@ class CommoditiesController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
 
   def commodity_params
     params.require(:commodity).permit(:image, :name, :price, :quantity, :storage_location, :purchase_shop, :purchase_day, :explanation).merge(user_id: current_user.id)
+  end
+
+  def set_commodity
+    @commodity = Commodity.find(params[:id])
   end
 
   def move_to_registration

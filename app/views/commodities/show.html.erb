@@ -1,0 +1,49 @@
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @commodity.name %>
+    </h2>
+    <div class='item-img-content'>
+      <% if @commodity.image.attached? %>
+        <%= image_tag @commodity.image ,class:"item-box-img" %>
+      <% else %>
+        <%= image_tag "no_image.jpg", class: "item-box-img" %>
+      <% end %>
+    </div>
+
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">価格</th>
+          <td class="detail-value">¥<%= @commodity.price.to_s(:delimited) %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">個数</th>
+          <td class="detail-value"><%= @commodity.quantity %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">保管場所</th>
+          <td class="detail-value"><%= @commodity.storage_location %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">購入場所</th>
+          <td class="detail-value"><%= @commodity.purchase_shop %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">購入日</th>
+          <td class="detail-value"><%= @commodity.purchase_day.strftime('%Y年%m月%d日') %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">メモ</th>
+          <td class="detail-value"><%= @commodity.explanation %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <%= link_to '内容の編集', edit_commodity_path(@commodity.id), method: :get, class: "item-blue-btn" %>
+    <p class='or-text'>or</p>
+    <%= link_to '削除', commodity_path(@commodity.id), method: :delete, class:'item-destroy' %>
+
+    <a href="/" class='another-item'>トップページにもどる</a>
+  </div>
+</div>
