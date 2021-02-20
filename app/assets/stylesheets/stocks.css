@@ -49,21 +49,21 @@
 }
 
 .stock-name-header {
-  width: 15%;
+  width: 30%;
   text-align: center;
   color: #1e8fffdc;
   font-weight: bold;
 }
 
 .stock-img-content-header {
-  width: 25%;
+  width: 20%;
   text-align: center;
   color: #1e8fffdc;
   font-weight: bold;
 }
 
 .stock-quantity-header {
-  width: 25%;
+  width: 15%;
   text-align: center;
   color: #1e8fffdc;
   font-weight: bold;
@@ -81,11 +81,11 @@
   color: rgb(49, 49, 49);
   font-weight: bold;
   text-align: center;
-  width: 15%;
+  width: 30%;
 }
 
 .stock-img-content {
-  width: 25%;
+  width: 20%;
   text-align: center;
 }
 
@@ -98,15 +98,19 @@
 }
 
 .stock-quantity {
-  width: 25%;
-  text-align: center;
+  font-size: 1.2rem;
   color: rgb(49, 49, 49);
+  font-weight: bold;
+  text-align: center;
+  width: 15%;
 }
 
 .stock-detail {
-  width: 35%;
-  text-align: center;
+  font-size: 1.2rem;
   color: rgb(49, 49, 49);
+  font-weight: bold;
+  text-align: center;
+  width: 35%;
 }
 
 .separate {

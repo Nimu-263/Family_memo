@@ -1,5 +1,5 @@
 class StocksController < ApplicationController
-  def commodity
-    ＠commodities = Commodity.all.order(id: "DESC")
+  def index
+    @commodities = Commodity.all.order(id: "DESC")
   end
 end
