@@ -40,6 +40,7 @@
 }
 
 .detail-item {
+  color: rgb(49, 49, 49);
   width: 20%;
   padding: 20px;
   display: table-cell;
@@ -124,4 +125,8 @@ hr {
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
+}
+
+.another-item:hover {
+  color: rgba(100, 100, 100,0.8)
 }

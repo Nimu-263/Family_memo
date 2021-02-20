@@ -1,0 +1,104 @@
+<div class="wrapper">
+  <div class="stocks">
+    <div class="stock-list-header">
+      <div class="header-name">
+        <h1>日用品リスト</h1>
+      </div>
+      <div class="create-list">
+        <a href="/commodities/new">リストに追加する</a>
+      </div>
+    </div>
+
+    <div class="stock-list">
+      <div class='stock-item-contents'>
+        <ul class='stock-item-lists'>
+          <% if Commodity.exists? && user_signed_in? %>
+            <% @commodities.each do |commodity| %>
+              <% if commodity.user_id == current_user.id %>
+                <li class='stock-item-list'>
+                  <%= link_to commodity_path(commodity.id) do %>
+                    <div class='stock-item-info'>
+                      <div class='stock-name-header'>
+                        <P>商品名</p>
+                      </div>
+                      <div class='stock-img-content-header'>
+                        <P>アイコン</p>
+                      </div>
+                      <div class='stock-quantity-header'>
+                        <P>個数</p>
+                      </div>
+                      <div class='stock-detail-header'>
+                        <P>保管場所</p>
+                      </div>
+                    </div>
+
+                    <hr class ="separate">
+
+                    <div class='stock-item-info'>
+                      <div class='stock-name'>
+                        <P><%= commodity.name %></p>
+                      </div>
+                      <div class='stock-img-content'>
+                        <% if commodity.image.attached? %>
+                          <%= image_tag commodity.image, class: "stock-img" %>
+                        <% else %>
+                          <%= image_tag "no_image.jpg", class: "stock-img" %>
+                        <% end %>
+                      </div>
+                      <div class='stock-quantity'>
+                        <P><%= commodity.quantity %></p>
+                      </div>
+                      <div class='stock-detail'>
+                        <P><%= commodity.storage_location %></p>
+                      </div>
+                    </div>
+                  <% end %>
+                </li>
+              <% end %>
+            <% end %>
+          <% end %>
+
+          <%# 商品がない場合のダミー %>
+          <% if Commodity.exists? == false && user_signed_in? %>
+            <li class='stock-item-list'>
+              <%= link_to '/' do %>
+                <div class='stock-item-info'>
+                  <div class='stock-name-header'>
+                    <P>商品名</p>
+                  </div>
+                  <div class='stock-img-content-header'>
+                    <P>アイコン</p>
+                  </div>
+                  <div class='stock-quantity-header'>
+                    <P>個数</p>
+                  </div>
+                  <div class='stock-detail-header'>
+                    <P>保管場所</p>
+                  </div>
+                </div>
+
+                <hr class ="separate">
+
+                <div class='stock-item-info'>
+                  <div class='stock-name'>
+                    <P>例）トイレットペーパー</p>
+                  </div>
+                  <div class='stock-img-content'>
+                      <%= image_tag "toilet_roll.jpg", class: "stock-img" %>
+                  </div>
+                  <div class='stock-quantity'>
+                    <P>2</p>
+                  </div>
+                  <div class='stock-detail'>
+                    <P>押入れ</p>
+                  </div>
+                </div>
+              <% end %>
+            </li>
+          <% end %>
+          <%# /商品がない場合のダミー %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

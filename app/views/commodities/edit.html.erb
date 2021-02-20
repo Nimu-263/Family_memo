@@ -1,0 +1,80 @@
+<div class="items-add-contents">
+  <div class="items-add-main">
+    <h2 class="items-add-title">在庫の情報を編集</h2>
+    <%= form_with model: @commodity, url: commodity_path, local: true do |f| %>
+
+      <%= render 'shared/error_messages', model: f.object %>
+
+      <%# アイコン %>
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          アイコン
+          <span class="optional">任意</span>
+        </div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"item-image" %>
+        </div>
+      </div>
+      <%# /アイコン %>
+
+      <div class="new-items">
+        <div class="weight-bold-text">
+          名前
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :name, class:"items-text", placeholder:"名前（必須 40文字まで)", maxlength:"40" %>
+
+        <%# 商品の詳細 %>
+        <div class="items-detail">
+          <div class="weight-bold-text">商品の詳細</div>
+          <div class="items-form">
+            <div class="weight-bold-text">
+              価格
+              <span class="optional">任意</span>
+            </div>
+            <%= f.text_area :price, class:"items-box", placeholder:"価格（任意 半角数字で10文字まで)", maxlength:"10" %>
+            <div class="weight-bold-text">
+              個数
+              <span class="optional">任意</span>
+            </div>
+            <%= f.text_area :quantity, class:"items-box", placeholder:"個数（任意 半角数字で10文字まで)", maxlength:"10" %>
+            <div class="weight-bold-text">
+              保管場所
+              <span class="optional">任意</span>
+            </div>
+            <%= f.text_area :storage_location, class:"items-box", placeholder:"保管場所（任意 40文字まで)", maxlength:"40" %>
+            <div class="weight-bold-text">
+              購入場所
+              <span class="optional">任意</span>
+            </div>
+            <%= f.text_area :purchase_shop, class:"items-box", placeholder:"購入場所（任意 40文字まで)", maxlength:"40" %>
+            <div class="weight-bold-text">
+              購入日
+              <span class="optional">任意</span>
+            </div>
+            <%= f.date_field :purchase_day, class:"items-box", placeholder:"購入日（任意)" %>
+          </div>
+        </div>
+        <%# /商品の詳細 %>
+
+        <div class="items-explain">
+          <div class="weight-bold-text">
+            メモ
+            <span class="optional">任意</span>
+          </div>
+          <%= f.text_area :explanation, class:"items-text", placeholder:"メモ（任意 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+        </div>
+      </div>
+
+      <%# 下部ボタン %>
+      <div class="add-btn-contents">
+        <%= f.submit "変更する" ,class:"add-btn" %>
+        <%=link_to '日用品リストにもどる', "/commodities", class:"back-btn" %>
+      </div>
+      <%# /下部ボタン %>
+    <% end %>
+  </div>
+</div>
