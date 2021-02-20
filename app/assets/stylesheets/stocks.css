@@ -24,11 +24,7 @@
 }
 
 .stock-item-contents {
-  margin: 4vh 40px 0;
-  padding: 2vh 0;
-  border: 1px solid lightgray;
-  border-radius: 20px;
-  box-shadow: 0px 0px 4px 0px lightgray;
+  margin: 4vh 40px;
 }
 
 .stock-item-lists {
@@ -40,6 +36,11 @@
 
 .stock-item-list {
   width: 100%;
+  padding: 2vh 0;
+  margin: 2vh 0;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  box-shadow: 0px 0px 4px 0px lightgray;
 }
 
 .stock-item-info {

@@ -12,7 +12,7 @@ class CommoditiesController < ApplicationController
   def create
     @commodity = Commodity.new(commodity_params)
     if @commodity.save
-      redirect_to root_path
+      redirect_to "/commodities"
     else
       render :new
     end

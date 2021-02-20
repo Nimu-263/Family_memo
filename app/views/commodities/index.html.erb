@@ -16,7 +16,7 @@
             <% @commodities.each do |commodity| %>
               <% if commodity.user_id == current_user.id %>
                 <li class='stock-item-list'>
-                  <%= link_to home_path(commodity.id) do %>
+                  <%= link_to commodity_path(commodity.id) do %>
                     <div class='stock-item-info'>
                       <div class='stock-name-header'>
                         <P>商品名</p>
