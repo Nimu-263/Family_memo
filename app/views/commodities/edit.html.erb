@@ -1,7 +1,7 @@
 <div class="items-add-contents">
   <div class="items-add-main">
-    <h2 class="items-add-title">在庫の情報を入力</h2>
-    <%= form_with model: @commodity, url: "/commodities", local: true do |f| %>
+    <h2 class="items-add-title">在庫の情報を編集</h2>
+    <%= form_with model: @commodity, url: commodity_path, local: true do |f| %>
 
       <%= render 'shared/error_messages', model: f.object %>
 
@@ -71,7 +71,7 @@
 
       <%# 下部ボタン %>
       <div class="add-btn-contents">
-        <%= f.submit "リストに追加する" ,class:"add-btn" %>
+        <%= f.submit "変更する" ,class:"add-btn" %>
         <%=link_to '日用品リストにもどる', "/commodities", class:"back-btn" %>
       </div>
       <%# /下部ボタン %>

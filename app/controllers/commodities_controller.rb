@@ -22,6 +22,22 @@ class CommoditiesController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @commodity.update(commodity_params)
+      redirect_to commodity_path(@commodity.id)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @commodity.destroy
+    redirect_to "/commodities"
+  end
+
   private
 
   def commodity_params

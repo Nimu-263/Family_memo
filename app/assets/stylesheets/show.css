@@ -126,3 +126,7 @@ hr {
   font-weight: bold;
   font-size: 20px;
 }
+
+.another-item:hover {
+  color: rgba(100, 100, 100,0.8)
+}
