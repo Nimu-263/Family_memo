@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :memos, except: [:show]
   get 'memos/:id', to: 'memos#checked'
   resources :commodities
+  resources :foods
 end

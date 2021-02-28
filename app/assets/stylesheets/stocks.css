@@ -50,7 +50,7 @@
 }
 
 .stock-name-header {
-  width: 30%;
+  width: 25%;
   text-align: center;
   color: #1e8fffdc;
   font-weight: bold;
@@ -71,7 +71,21 @@
 }
 
 .stock-detail-header {
-  width: 35%;
+  width: 40%;
+  text-align: center;
+  color: #1e8fffdc;
+  font-weight: bold;
+}
+
+.stock-expiration-header {
+  width: 10%;
+  text-align: center;
+  color: #1e8fffdc;
+  font-weight: bold;
+}
+
+.stock-location-header {
+  width: 30%;
   text-align: center;
   color: #1e8fffdc;
   font-weight: bold;
@@ -82,7 +96,7 @@
   color: rgb(49, 49, 49);
   font-weight: bold;
   text-align: center;
-  width: 30%;
+  width: 25%;
 }
 
 .stock-img-content {
@@ -111,7 +125,23 @@
   color: rgb(49, 49, 49);
   font-weight: bold;
   text-align: center;
-  width: 35%;
+  width: 40%;
+}
+
+.stock-expiration {
+  font-size: 1.2rem;
+  color: #ea352d;
+  font-weight: bold;
+  text-align: center;
+  width: 10%;
+}
+
+.stock-location {
+  font-size: 1.2rem;
+  color: rgb(49, 49, 49);
+  font-weight: bold;
+  text-align: center;
+  width: 30%;
 }
 
 .separate {
