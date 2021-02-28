@@ -44,7 +44,7 @@ class FoodsController < ApplicationController
     params.require(:food).permit(:image, :name, :price, :quantity, :storage_location, :purchase_shop, :purchase_day, :expiration_date, :explanation).merge(user_id: current_user.id)
   end
 
-  def set_commodity
+  def set_food
     @food = Food.find(params[:id])
   end
 

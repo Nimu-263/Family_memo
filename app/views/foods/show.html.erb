@@ -1,0 +1,53 @@
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @food.name %>
+    </h2>
+    <div class='item-img-content'>
+      <% if @food.image.attached? %>
+        <%= image_tag @food.image ,class:"item-box-img" %>
+      <% else %>
+        <%= image_tag "no_image.jpg", class: "item-box-img" %>
+      <% end %>
+    </div>
+
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">価格</th>
+          <td class="detail-value"><% unless @food.price.nil? %> ¥ <%= @food.price.to_s(:delimited) %> <% end %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">個数</th>
+          <td class="detail-value"><%= @food.quantity %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">期限</th>
+          <td class="detail-value"><% unless @food.expiration_date.nil? %> <%= @food.expiration_date.strftime('%Y年%m月%d日') %> <% end %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">保管場所</th>
+          <td class="detail-value"><%= @food.storage_location %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">購入場所</th>
+          <td class="detail-value"><%= @food.purchase_shop %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">購入日</th>
+          <td class="detail-value"><% unless @food.purchase_day.nil? %> <%= @food.purchase_day.strftime('%Y年%m月%d日') %> <% end %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">メモ</th>
+          <td class="detail-value"><%= @food.explanation %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <%= link_to '内容の編集', edit_food_path(@food.id), method: :get, class: "item-blue-btn" %>
+    <p class='or-text'>or</p>
+    <%= link_to '削除', food_path(@food.id), method: :delete, class:'item-destroy' %>
+
+    <a href="/foods" class='another-item'>食品リストにもどる</a>
+  </div>
+</div>

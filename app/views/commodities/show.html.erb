@@ -15,7 +15,7 @@
       <tbody>
         <tr>
           <th class="detail-item">価格</th>
-          <td class="detail-value">¥<%= @commodity.price.to_s(:delimited) %></td>
+          <td class="detail-value"><% unless @commodity.price.nil? %> ¥ <%= @commodity.price.to_s(:delimited) %> <% end %></td>
         </tr>
         <tr>
           <th class="detail-item">個数</th>
@@ -31,7 +31,7 @@
         </tr>
         <tr>
           <th class="detail-item">購入日</th>
-          <td class="detail-value"><%= @commodity.purchase_day.strftime('%Y年%m月%d日') %></td>
+          <td class="detail-value"><% unless @commodity.purchase_day.nil? %> <%= @commodity.purchase_day.strftime('%Y年%m月%d日') %> <% end %></td>
         </tr>
         <tr>
           <th class="detail-item">メモ</th>
